@@ -1,0 +1,15 @@
+name: gatekeeper
+on:
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+jobs:
+    gatekeeper:
+        runs-on: ubuntu-latest
+        steps:
+          - name: pr check
+            run: |
+              echo "${{github.run_id}}"
+              echo "GAtekeeper checks cpmplete"
+            

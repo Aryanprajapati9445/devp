@@ -1,0 +1,14 @@
+name: housekeeper
+on:
+    schedule:
+        - cron:  '0 2 * * *'
+    workflow_dispatch:
+jobs:
+    cleanup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: date
+              run: |
+                  date
+                  echo "Housekeeping completed"
+
